@@ -1,0 +1,72 @@
+#root {
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	min-height: 100vh;
+	height: 100%;
+	background-image: url('/public/bg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+}
+.card {
+	max-width: 500px;
+	width: 100%;
+	padding: 2em 1em;
+	background-color: #ffffff20;
+	backdrop-filter: brightness(1) blur(2px);
+	border-radius: 1.5em;
+	box-shadow: 1px 1px 25px 0 #531a93;
+	&:hover {
+		background-color: #1b030320;
+		transition-duration: 1s;
+	}
+}
+.card__title,
+.card__subtitle {
+	text-align: center;
+	color: #531a93;
+}
+.card__body {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.card__icon {
+	&:hover {
+		transition: 1s;
+		transform: rotate(6rad);
+	}
+}
+.card__temperature {
+	font-size: 2rem;
+	text-align: center;
+	margin-bottom: 0.25em;
+	&:hover {
+		box-shadow: 10px 10px 25px 10 #5c7baf69;
+		transition: 0.5s;
+		transform: scale(1.2);
+	}
+}
+.card__button {
+	display: block;
+	margin: 0 auto;
+	background-color: #ffffff20;
+	backdrop-filter: brightness(1) blur(2px);
+	&:hover {
+		box-shadow: 10px 10px 25px 10 #5c7baf69;
+		transition: 0.5s;
+		transform: scale(1.2);
+	}
+}
+.loading {
+	text-align: center;
+}
+.error {
+	text-align: center;
+}
+.loading__title {
+	font-size: 2rem;
+	color: #531a93;
+}
