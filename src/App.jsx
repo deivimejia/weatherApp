@@ -38,15 +38,17 @@ function App() {
 	const [toggle, setToggle] = useState(false);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState(null);
+	const [error1, setError1] = useState(null);
 
 	useEffect(() => {
+		setError1(null);
 		navigator.geolocation.getCurrentPosition(
 			(position) => {
 				const { latitude, longitude } = position.coords;
 				setCoords({ latitude, longitude });
 			},
 			(error) => {
-				setError(error);
+				setError1(error);
 			},
 		);
 	}, []);
@@ -76,7 +78,7 @@ function App() {
 					});
 				})
 				.catch((err) => {
-					console.log(err);
+					setError(err);
 				})
 				.finally(() => {
 					setLoading(false);
@@ -86,6 +88,7 @@ function App() {
 
 	return (
 		<div>
+			{error1 && <p>{error1}</p>}
 			{loading ? (
 				<Loading />
 			) : (

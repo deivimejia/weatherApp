@@ -6,9 +6,9 @@ function Card({ weather, toggle, setToggle }) {
 		: weather.temp;
 	return (
 		<div className="card">
-			<h1 className="card__title">Weather App</h1>
+			<h1 className="card__title">Weather App.</h1>
 			<h2 className="card__subtitle">
-				{weather.city}, {weather.country}
+				{weather.city}, {weather.country}.
 			</h2>
 			<div className="card__body">
 				<img
